@@ -30,10 +30,6 @@ content="width=device-width, initial-scale=1.0">
       height: 200px;
         }
     
-    .artigo-autor{
-      font-weight: bold;
-    }
-    
 </style>
 </head>
 <body> 
@@ -49,14 +45,32 @@ content="width=device-width, initial-scale=1.0">
 <p> class="artigo-autor">Por: Isadora Rueda</p>
 <p> Boas-vindas ao meu novo blog! Aqui eu vou compartilhar curiosidades sobre artistas dos anos 60 aos anos 90. </p>   
       <button> ❤️​ 0<span></span></button>
+      <button> 👎​</button>
 
     </div>
-    
-  </main>
+       </article>
+    </main>
+  
 </body>
   <script>
-    const botao = document.querySelector ("button");
-  </script>
+    const botao = document.querySelectorAll ("button");
+    botoes.forEach(function(botao) {
+      let curtiu= false;
+      botao.addEventListener ("click", botaoClicado);
+      function notaoClicado() {
+        console.log ("fui clicado");
+        let texto = botao.querySelector("span");
+        if (curtiu===false) {
+          texto.textContent++;
+          curtiu= true;
+        } else{
+          texto.textContent--;
+          curtiu=false;
+        }
+  }
+    });  
+   </script>
+</body>
 </html>
 
 
